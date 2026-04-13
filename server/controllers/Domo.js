@@ -38,7 +38,6 @@ const deleteDomo = async (req, res) => {
 
     try {
         //every deleted domo must match each id's owner
-        const result = await Domo.deleteOne({ _id: id, owner });
         return res.status(200).json({ message: 'Domo deleted successfully' });
     } catch (err) {
         console.error(err);
